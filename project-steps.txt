@@ -49,3 +49,8 @@ Commit 6:
 
 Commit 7: 
 ** Step 7 -> Implementing Loading Skeletons
+
+    - Adds Skeleton components,
+
+Commit 8: 
+** Step 8 -> Removing Duplicates  
