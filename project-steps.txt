@@ -54,3 +54,8 @@ Commit 7:
 
 Commit 8: 
 ** Step 8 -> Removing Duplicates  
+
+    - Creates a new component to be a container of the cards and apply the specific styles config. 
+
+Commit 9: 
+** Step 9 -> Fetching and Filtering
