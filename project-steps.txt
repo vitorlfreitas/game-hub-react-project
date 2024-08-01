@@ -1,0 +1,20 @@
+Project: Game-Hub
+Developed by: Mosh from CodeWithMosh.com
+Course taken at 01/08/2024
+
+Commit 1:
+** Step 1 → Set up project **
+
+    On terminal “npm create vite@4.1.0” and follow the steps.
+    Commit the project set up.
+
+Commit 2:
+** Step 2 -> Choosing the UI Librabry = Chakra UI **
+
+    Go to Chakra.ui website and follow the steps. Since we are using vite, we need to find the steps for vite
+    Follow all the steps, install all dependencies and set the provider.
+    Finish by adding a button to check if it is working
+    Commit changes so far.
+
+Commit 3:
+** 
