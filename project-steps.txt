@@ -37,4 +37,9 @@ Commit 4:
     - Test layout responsiveness
 
 Commit 5: 
-** Step 5 -> 
+** Step 5 -> Adds Critical Score Component to Cards
+
+    - Creates the Critical component and adds to the CardGame
+
+Commit 6:
+** Step 6 -> Optimize Images for a better performance
