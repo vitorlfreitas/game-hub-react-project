@@ -17,4 +17,24 @@ Commit 2:
     Commit changes so far.
 
 Commit 3:
-** 
+** Step 3 -> Building the Nav Bar
+
+    - Setting up the Dark mode script (See: https://v2.chakra-ui.com/docs/styled-system/color-mode)
+    - Creating a NavBar component
+    - Creating a ColorModeSwitch component
+
+Commit 4:
+** Step 4 -> Fetching the Games from Rawg.io
+
+    - Install axios run: npm i axios
+    - Create a new folder 'services'
+    - Create a new file 'api-client.ts'
+    - Add the totem key and baseURL
+    - Create Cards using Chakra components
+    - Implement the image field for interface Game
+    - Refactor code for a better reusability
+    - Implement an Abort and Effect clean method
+    - Test layout responsiveness
+
+Commit 5: 
+** Step 5 -> 
