@@ -1,13 +1,30 @@
-import useGenres from '../hooks/useGenres'
+import { HStack, Image, List, ListItem, Text } from "@chakra-ui/react";
+import useGenres from "../hooks/useGenres";
+import GenreCardSkeleton from "./GenreCardSkeleton";
+import GenreCard from "./GenreCard";
 
 const GenreList = () => {
-    const { data } = useGenres();
+    
+    const { data, isLoading } = useGenres();
 
-  return (
-    <ul>
-        {data.map(genre => <li key={genre.id}>{genre.name}</li>)}
-    </ul>
-  )
-}
+    const skeletons = [1, 2, 3, 4, 5, 6];
 
-export default GenreList
+    return (
+        <List>
+            {isLoading &&
+                skeletons.map((skeleton) => (
+                    <ListItem key={skeleton} paddingY="5px">
+                        <GenreCardSkeleton />
+                    </ListItem>
+                ))}
+
+            {data.map((genre) => (
+                <ListItem key={genre.id} paddingY="5px">
+                    <GenreCard genre={genre} />
+                </ListItem>
+            ))}
+        </List>
+    );
+};
+
+export default GenreList;
