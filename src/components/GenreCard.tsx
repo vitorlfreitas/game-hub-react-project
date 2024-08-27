@@ -1,13 +1,14 @@
 import { Genre } from "../hooks/useGenres";
-import { HStack, Image, Text } from "@chakra-ui/react";
+import { Button, HStack, Image, Text } from "@chakra-ui/react";
 import getCroppedIMageUrl from "../services/image-url";
-
 
 interface Props {
     genre: Genre;
+    onSelectGenre: (genre: Genre) => void;
+    selectedGenre: Genre | null;
 }
 
-const GenreCard = ({ genre } : Props) => {
+const GenreCard = ({ genre, onSelectGenre, selectedGenre }: Props) => {
     return (
         <HStack>
             <Image
@@ -15,9 +16,14 @@ const GenreCard = ({ genre } : Props) => {
                 borderRadius={8}
                 src={getCroppedIMageUrl(genre.image_background)}
             />
-            <Text fontSize="lg">{genre.name}</Text>
+            <Button
+                fontWeight={genre.id === selectedGenre?.id ? "bold" : "normal"}
+                onClick={() => onSelectGenre(genre)}
+                fontSize="lg"
+            >
+                {genre.name}
+            </Button>
         </HStack>
-
     );
 };
 
