@@ -1,7 +1,7 @@
-import { Heading, HStack, Image, List, ListItem, Text } from "@chakra-ui/react";
+import { Heading, List, ListItem } from "@chakra-ui/react";
 import useGenres, { Genre } from "../hooks/useGenres";
-import GenreCardSkeleton from "./GenreCardSkeleton";
 import GenreCard from "./GenreCard";
+import GenreCardSkeleton from "./GenreCardSkeleton";
 
 interface Props {
     onSelectGenre: (genre: Genre) => void;
@@ -24,7 +24,7 @@ const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
                         </ListItem>
                     ))}
 
-                {data.map((genre) => (
+                {data?.results.map((genre) => (
                     <ListItem key={genre.id} paddingY="5px">
                         <GenreCard
                             selectedGenre={selectedGenre}
