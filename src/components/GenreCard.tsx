@@ -1,5 +1,5 @@
 import { Button, HStack, Image } from "@chakra-ui/react";
-import { Genre } from "../hooks/useGenres";
+import { Genre } from "../entities/Genre";
 import getCroppedIMageUrl from "../services/image-url";
 import useGameQueryStore from "../store";
 
@@ -7,11 +7,10 @@ interface Props {
     genre: Genre;
 }
 
-const GenreCard = ( {genre} : Props) => {
+const GenreCard = ({ genre }: Props) => {
+    const selectedGenreId = useGameQueryStore((s) => s.gameQuery.genreId);
+    const setSelectedGenreId = useGameQueryStore((s) => s.setGenreId);
 
-    const selectedGenreId = useGameQueryStore(s => s.gameQuery.genreId);
-    const setSelectedGenreId = useGameQueryStore(s => s.setGenreId);
-    
     return (
         <HStack>
             <Image
